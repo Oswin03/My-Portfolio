@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}My Skills & Expertise{% endblock %}
+
+{% block content %}
+<section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                Technologies and methodologies I'm proficient with
+            </p>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-center">Technical Skills</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                {% for skill in skills %}
+                {% if skill.is_technical %}
+                <div class="skill-card animate-on-scroll" style="animation-delay: {{ forloop.counter0|add:1 }}00ms">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="{{ skill.icon }} text-indigo-600 text-xl"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-center mb-1">
+                                <h4 class="font-bold">{{ skill.title }}</h4>
+                                <span class="text-sm font-medium text-indigo-600">{{ skill.percentage }}%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: {{ skill.percentage }}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">{{ skill.description }}</p>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Professional Skills -->
+        <div>
+            <h3 class="text-2xl font-bold mb-8 text-center">Professional Skills</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                {% for skill in skills %}
+                {% if not skill.is_technical %}
+                <div class="skill-card animate-on-scroll" style="animation-delay: {{ forloop.counter0|add:1 }}00ms">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="{{ skill.icon }} text-indigo-600 text-xl"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex justify-between items-center mb-1">
+                                <h4 class="font-bold">{{ skill.title }}</h4>
+                                <span class="text-sm font-medium text-indigo-600">{{ skill.percentage }}%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: {{ skill.percentage }}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">{{ skill.description }}</p>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-16 text-center">
+            <a href="{% url 'contact' %}" class="btn btn-primary inline-block px-8 py-4 text-lg">
+                Let's Work Together <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <div class="mt-8 text-gray-500 max-w-2xl mx-auto">
+                <p>I'm always looking to expand my skill set and take on new challenges. If you have a project that requires specific expertise, feel free to reach out.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

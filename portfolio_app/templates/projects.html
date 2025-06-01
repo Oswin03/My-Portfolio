@@ -1,0 +1,417 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My Projects | Professional Portfolio{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-down">My Professional Projects</h1>
+    <p class="text-xl text-blue-100 max-w-3xl mx-auto animate-fade-in-up delay-100">
+      A curated showcase of my technical solutions and implementations
+    </p>
+  </div>
+</section>
+
+<!-- Projects Filter -->
+<section class="py-8 bg-white sticky top-0 z-20 shadow-sm backdrop-blur-sm bg-opacity-90">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap justify-center gap-3">
+      <button class="filter-btn active relative px-6 py-3 rounded-full font-medium transition-all duration-300 
+                  bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg
+                  hover:shadow-xl hover:-translate-y-0.5 hover:from-blue-700 hover:to-indigo-700
+                  group overflow-hidden" 
+              data-filter="all">
+        <span class="relative z-10 flex items-center">
+          <span class="mr-2">🚀</span>
+          My Projects
+        </span>
+        <span class="absolute inset-0 bg-gradient-to-r from-blue-700 to-indigo-700 opacity-0 
+                    group-hover:opacity-100 transition-opacity duration-300"></span>
+        <span class="absolute bottom-0 left-1/2 w-0 h-0.5 bg-white transition-all duration-300 
+                    group-hover:w-4/5 group-hover:left-1/10"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Grid -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Web Applications -->
+      <!-- Project 1 - E-commerce -->
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg" data-category="web">
+        <div class="relative h-60 overflow-hidden">
+          <img src="{% static 'images/E-commerce platform.jpeg' %}" alt="E-commerce Platform" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <span class="inline-block bg-white text-blue-600 px-4 py-2 rounded-md font-medium">
+              View Case Study
+            </span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold text-gray-900">E-commerce Platform</h3>
+            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Web</span>
+          </div>
+          <p class="text-gray-600 mb-4">Full-featured online store with payment processing and inventory management</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge">Django</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 - Social Media Dashboard -->
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg" data-category="web">
+        <div class="relative h-60 overflow-hidden">
+          <img src="{% static 'images/social-dashboard.jpeg' %}" alt="Social Media Dashboard" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <span class="inline-block bg-white text-blue-600 px-4 py-2 rounded-md font-medium">
+              View Case Study
+            </span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold text-gray-900">Social Media Dashboard</h3>
+            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Web</span>
+          </div>
+          <p class="text-gray-600 mb-4">Analytics platform for tracking engagement across multiple networks</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge">Vue.js</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MongoDB</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 - Project Management Tool -->
+      <div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg" data-category="web">
+        <div class="relative h-60 overflow-hidden">
+          <img src="{% static 'images/project-management.jpeg' %}" alt="Project Management Tool" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+            <span class="inline-block bg-white text-blue-600 px-4 py-2 rounded-md font-medium">
+              View Case Study
+            </span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold text-gray-900">Project Management Tool</h3>
+            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Web</span>
+          </div>
+          <p class="text-gray-600 mb-4">Collaborative workspace with task tracking and team communication</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-badge">Angular</span>
+            <span class="tech-badge">Firebase</span>
+            <span class="tech-badge">Material UI</span>
+          </div>
+        </div>
+      </div>
+
+    <!-- API Services -->
+<!-- Project 4 - REST API Service -->
+<div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg" data-category="api">
+  <div class="relative h-60 overflow-hidden">
+    <img src="{% static 'images/api-service.jpeg' %}" alt="API Service" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+      <span class="inline-block bg-white text-blue-600 px-4 py-2 rounded-md font-medium">
+        View Case Study
+      </span>
+    </div>
+  </div>
+  <div class="p-6">
+    <div class="flex justify-between items-start mb-2">
+      <h3 class="text-xl font-bold text-gray-900">Django REST API Service</h3>
+      <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">API</span>
+    </div>
+    <p class="text-gray-600 mb-4">Scalable backend service with JWT authentication and Swagger documentation</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="tech-badge">Django REST</span>
+      <span class="tech-badge">JWT</span>
+      <span class="tech-badge">PostgreSQL</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Project 6 - Weather API -->
+<div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg" data-category="api">
+  <div class="relative h-60 overflow-hidden">
+    <img src="{% static 'images/weather-api.jpeg' %}" alt="Weather API" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+      <span class="inline-block bg-white text-blue-600 px-4 py-2 rounded-md font-medium">
+        View Case Study
+      </span>
+    </div>
+  </div>
+  <div class="p-6">
+    <div class="flex justify-between items-start mb-2">
+      <h3 class="text-xl font-bold text-gray-900">Python Weather API</h3>
+      <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">API</span>
+    </div>
+    <p class="text-gray-600 mb-4">Real-time weather data with historical trends using Python</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="tech-badge">FastAPI</span>
+      <span class="tech-badge">Redis</span>
+      <span class="tech-badge">OpenWeatherMap</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- Project 8 - BI Dashboard -->
+<div class="project-card bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:scale-[1.02] hover:shadow-lg" data-category="data">
+  <div class="relative h-60 overflow-hidden">
+    <img src="{% static 'images/bi-dashboard.jpeg' %}" alt="BI Dashboard" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+      <span class="inline-block bg-white text-blue-600 px-4 py-2 rounded-md font-medium">
+        View Case Study
+      </span>
+    </div>
+  </div>
+  <div class="p-6">
+    <div class="flex justify-between items-start mb-2">
+      <h3 class="text-xl font-bold text-gray-900">Python Analytics Dashboard</h3>
+      <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Data</span>
+    </div>
+    <p class="text-gray-600 mb-4">Interactive BI dashboard built with Python visualization tools</p>
+    <div class="flex flex-wrap gap-2">
+      <span class="tech-badge">Plotly Dash</span>
+      <span class="tech-badge">SQLAlchemy</span>
+      <span class="tech-badge">Matplotlib</span>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Project Details Modal (hidden by default) -->
+<div id="project-modal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4">
+  <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+    <div class="modal-content"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  /* Custom animations */
+  @keyframes fade-in-down {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-down { animation: fade-in-down 0.6s ease-out forwards; }
+  .animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+
+  /* Tech badge styles */
+  .tech-badge {
+    display: inline-block;
+    background-color: #f3f4f6;
+    color: #1f2937;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+  }
+
+  /* Project card hover effect */
+  .project-card {
+    transition: all 0.3s ease;
+  }
+  
+  /* Filter button active state */
+  .filter-btn.active {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+  }
+  .filter-btn.active:hover {
+    background-color: #1d4ed8;
+  }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Enhanced filter functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Update active button with smooth transition
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active', 'bg-blue-600', 'text-white', 'hover:bg-blue-700');
+        btn.classList.add('bg-white', 'border', 'border-gray-200', 'hover:bg-gray-50');
+      });
+      
+      this.classList.remove('bg-white', 'border', 'border-gray-200', 'hover:bg-gray-50');
+      this.classList.add('active', 'bg-blue-600', 'text-white', 'hover:bg-blue-700');
+      
+      const filterValue = this.dataset.filter;
+      
+      // Animate project filtering
+      projectCards.forEach(card => {
+        if (filterValue === 'all' || card.dataset.category === filterValue) {
+          card.style.display = 'block';
+          card.animate([
+            { opacity: 0, transform: 'translateY(20px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+          ], {
+            duration: 300,
+            easing: 'ease-out'
+          });
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Enhanced modal functionality
+  const projectModal = document.getElementById('project-modal');
+  const modalContent = document.querySelector('.modal-content');
+  
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+      // Don't open modal if clicking on the "View Case Study" overlay
+      if (e.target.closest('.absolute.inset-0')) return;
+      
+      const projectTitle = this.querySelector('h3').textContent;
+      const projectDescription = this.querySelector('p').textContent;
+      const projectType = this.querySelector('span').textContent;
+      const techBadges = Array.from(this.querySelectorAll('.tech-badge')).map(badge => badge.outerHTML).join('');
+      const projectImage = this.querySelector('img').src;
+      
+      // Create detailed modal content
+      const content = `
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-6">
+            <h2 class="text-2xl font-bold text-gray-900">${projectTitle}</h2>
+            <button id="close-modal" class="text-gray-400 hover:text-gray-500 transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="relative h-64 md:h-80 rounded-lg overflow-hidden">
+              <img src="${projectImage}" alt="${projectTitle}" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <div class="mb-6">
+                <span class="inline-block ${
+                  projectType === 'Web' ? 'bg-blue-100 text-blue-800' : 
+                  projectType === 'API' ? 'bg-green-100 text-green-800' : 
+                  'bg-purple-100 text-purple-800'
+                } text-xs font-medium px-2.5 py-0.5 rounded-full mb-3">
+                  ${projectType}
+                </span>
+                <p class="text-gray-700 leading-relaxed">${projectDescription}</p>
+              </div>
+              
+              <div class="mb-6">
+                <h3 class="font-semibold text-gray-900 mb-2">Technologies Used:</h3>
+                <div class="flex flex-wrap gap-2">
+                  ${techBadges}
+                </div>
+              </div>
+              
+              <div class="mb-8">
+                <h3 class="font-semibold text-gray-900 mb-3">Key Features:</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <svg class="flex-shrink-0 h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-gray-700">Responsive design optimized for all devices</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="flex-shrink-0 h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-gray-700">Secure authentication and authorization system</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg class="flex-shrink-0 h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-gray-700">CI/CD pipeline for automated deployments</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="flex flex-wrap gap-3">
+                <a href="#" class="px-5 py-2.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center">
+                  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                  View Live Demo
+                </a>
+                <a href="#" class="px-5 py-2.5 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors flex items-center">
+                  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                  </svg>
+                  Source Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      modalContent.innerHTML = content;
+      projectModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      
+      // Animate modal appearance
+      projectModal.animate([
+        { opacity: 0 },
+        { opacity: 1 }
+      ], {
+        duration: 200,
+        easing: 'ease-out'
+      });
+    });
+  });
+
+  // Close modal
+  document.addEventListener('click', function(e) {
+    if (e.target.id === 'close-modal' || e.target === projectModal) {
+      // Animate modal disappearance
+      projectModal.animate([
+        { opacity: 1 },
+        { opacity: 0 }
+      ], {
+        duration: 150,
+        easing: 'ease-in'
+      }).onfinish = () => {
+        projectModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      };
+    }
+  });
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !projectModal.classList.contains('hidden')) {
+      projectModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  });
+});
+</script>
+{% endblock %}

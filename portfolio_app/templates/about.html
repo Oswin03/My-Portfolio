@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+
+{% load static %} 
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<!-- About Section -->
+<section class="py-16 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="relative group">
+                <div class="w-full h-auto bg-gray-100 rounded-2xl overflow-hidden shadow-xl transition-all duration-700 transform group-hover:-translate-y-2">
+                    <img src="{% static 'images/about-me.jpg' %}" alt="Oswin R" 
+                         class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg transition-all duration-500 hover:rotate-6">
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-3 animate-pulse">
+                            <i class="fas fa-medal text-indigo-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-800">3+ Years</p>
+                            <p class="text-sm text-gray-600">Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -top-6 -left-6 w-24 h-24 rounded-full bg-purple-200 opacity-20 group-hover:opacity-40 transition-all duration-1000"></div>
+            </div>
+            
+            <div class="space-y-6">
+                <h2 class="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+                    About Me
+                </h2>
+                <p class="text-gray-600 transition-all duration-500 hover:text-gray-800">
+                    I'm an aspiring Python Developer with a strong background in Full Stack Development and UI/UX Design. With over 5 years of experience building visually appealing and user-friendly digital products, I'm now diving deep into Python to build robust, backend-powered applications and APIs.
+                </p>
+                <p class="text-gray-600 transition-all duration-500 hover:text-gray-800">
+                    I discovered my passion for technology when I built my first website at 18. Since then, I've focused on creating responsive, efficient, and accessible applications. Now, I'm channeling that same passion into Python exploring frameworks like Django and Flask, and building projects that solve real-world problems.
+                </p>
+                <p class="text-gray-600 transition-all duration-500 hover:text-gray-800">
+                    I specialize in creating responsive web applications with clean, efficient code and intuitive user interfaces. My approach combines technical expertise with creative problem-solving to deliver solutions that meet both business objectives and user needs.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="flex items-center p-3 rounded-lg hover:bg-indigo-50 transition-all duration-300">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-3 group">
+                            <i class="fas fa-check text-indigo-600 transition-transform group-hover:rotate-12"></i>
+                        </div>
+                        <span class="text-gray-700">Clean Code</span>
+                    </div>
+                    <div class="flex items-center p-3 rounded-lg hover:bg-indigo-50 transition-all duration-300">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-3 group">
+                            <i class="fas fa-check text-indigo-600 transition-transform group-hover:rotate-12"></i>
+                        </div>
+                        <span class="text-gray-700">Responsive Design</span>
+                    </div>
+                    <div class="flex items-center p-3 rounded-lg hover:bg-indigo-50 transition-all duration-300">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-3 group">
+                            <i class="fas fa-check text-indigo-600 transition-transform group-hover:rotate-12"></i>
+                        </div>
+                        <span class="text-gray-700">SEO Optimized</span>
+                    </div>
+                    <div class="flex items-center p-3 rounded-lg hover:bg-indigo-50 transition-all duration-300">
+                        <div class="bg-indigo-100 p-2 rounded-full mr-3 group">
+                            <i class="fas fa-check text-indigo-600 transition-transform group-hover:rotate-12"></i>
+                        </div>
+                        <span class="text-gray-700">User Focused</span>
+                    </div>
+                </div>
+                
+                <a href="{% url 'contact' %}" 
+                   class="btn btn-primary inline-flex items-center group transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    Contact Me 
+                    <i class="fas fa-paper-plane ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Timeline -->
+<section class="py-16 bg-gray-50 relative">
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-64 h-64 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <h2 class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+            My Journey
+        </h2>
+        
+        <div class="space-y-8 relative">
+            <!-- Timeline line -->
+            <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-200 via-indigo-500 to-indigo-200"></div>
+            
+            <!-- Timeline Item 1 -->
+            <div class="relative pl-16 group">
+                <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-indigo-300">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-indigo-500">
+                    <h3 class="text-xl font-bold mb-1">Computer Science Student</h3>
+                    <p class="text-gray-600 mb-2">Anna University • 2021 - 2025</p>
+                    <p class="text-gray-700">
+                        Recently completed my degree in Computer Science.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="relative pl-16 group">
+                <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-indigo-300">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-indigo-500">
+                    <h3 class="text-xl font-bold mb-1">Python Developer (Trainee & Self-Learner)</h3>
+                    <p class="text-gray-600 mb-2"> 2021 - 2025</p>
+                    <p class="text-gray-700">
+                        Built Python-based web apps using Django, including portfolio and blog systems.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 3 -->
+            <div class="relative pl-16 group">
+                <div class="absolute left-0 top-0 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-indigo-300">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-indigo-500">
+                    <h3 class="text-xl font-bold mb-1">Frontend Enthusiast</h3>
+                    <p class="text-gray-600 mb-2">2021 - 2025</p>
+                    <p class="text-gray-700">
+                        Designed and developed responsive websites using HTML, CSS, and JavaScript.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fun Facts -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+            Fun Facts
+        </h2>
+        
+        <div class="grid md:grid-cols-4 gap-6 text-center">
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-indigo-100">
+                <div class="text-4xl font-bold text-indigo-600 mb-2 animate-count" data-target="15">0+</div>
+                <p class="text-gray-600">Projects Completed</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-indigo-100 animation-delay-100">
+                <div class="text-4xl font-bold text-indigo-600 mb-2 animate-count" data-target="25">0+</div>
+                <p class="text-gray-600">Coding Challenges Solved</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-indigo-100 animation-delay-200">
+                <div class="text-4xl font-bold text-indigo-600 mb-2 animate-count" data-target="10">0+</div>
+                <p class="text-gray-600">Certifications</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-indigo-100 animation-delay-300">
+                <div class="text-4xl font-bold text-indigo-600 mb-2 animate-count" data-target="3">0+</div>
+                <p class="text-gray-600">Years Experience</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-16 bg-gradient-to-br from-indigo-50 to-purple-50 relative overflow-hidden">
+    <div class="absolute -bottom-32 -right-32 w-64 h-64 bg-purple-200 rounded-full opacity-20"></div>
+    <div class="absolute -top-32 -left-32 w-64 h-64 bg-indigo-200 rounded-full opacity-20"></div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <h2 class="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">
+            What My HOD Say's
+        </h2>
+        
+        <div class="bg-white p-8 rounded-xl shadow-md transform transition-all duration-500 hover:scale-[1.02]">
+            <div class="flex flex-col md:flex-row items-center mb-6">
+                <div class="w-16 h-16 rounded-full bg-gray-200 overflow-hidden mr-4 mb-4 md:mb-0 border-4 border-white shadow-md">
+                    <img src="{% static 'images/HOD.png' %}" alt="Client" class="w-full h-full object-cover">
+                </div>
+                <div class="text-center md:text-left">
+                    <h4 class="font-bold text-lg">Dr.K.Alaudeen</h4>
+                    <p class="text-gray-600 text-sm">HOD of CSE Department</p>
+                </div>
+            </div>
+            <blockquote class="text-gray-700 italic mb-6 text-center md:text-left relative pl-6">
+                <div class="absolute left-0 top-0 text-4xl text-indigo-200 font-serif">"</div>
+                <p class="relative z-10">A curious and consistent learner, Oswin has shown great enthusiasm in applying theoretical knowledge to real-world coding challenges. Their work in Python and web development is creative, structured, and always improving.</p>
+                <div class="absolute right-0 bottom-0 text-4xl text-indigo-200 font-serif">"</div>
+            </blockquote>
+            <div class="flex justify-center md:justify-start">
+                {% for i in "12345" %}
+                <i class="fas fa-star text-yellow-400 mr-1 transform hover:scale-125 transition-transform duration-300"></i>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-1/3 w-32 h-32 bg-white rounded-full animate-float"></div>
+        <div class="absolute top-1/4 right-1/4 w-24 h-24 bg-white rounded-full animate-float animation-delay-2000"></div>
+        <div class="absolute bottom-1/3 left-1/4 w-20 h-20 bg-white rounded-full animate-float animation-delay-4000"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <h2 class="text-4xl font-bold mb-6">Want to work together?</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">
+            I'm currently available for freelance work and full-time positions. Let's discuss how I can help you achieve your goals.
+        </p>
+        <a href="{% url 'contact' %}" 
+           class="btn bg-white text-indigo-600 hover:bg-gray-100 inline-flex items-center px-8 py-3 text-lg font-bold transition-all duration-300 hover:shadow-xl hover:-translate-y-1 transform">
+            Get In Touch 
+            <i class="fas fa-paper-plane ml-2 transition-transform group-hover:translate-x-1"></i>
+        </a>
+    </div>
+</section>
+
+<style>
+    @keyframes blob {
+        0% { transform: translate(0px, 0px) scale(1); }
+        33% { transform: translate(30px, -50px) scale(1.1); }
+        66% { transform: translate(-20px, 20px) scale(0.9); }
+        100% { transform: translate(0px, 0px) scale(1); }
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+    
+    .animate-blob {
+        animation: blob 7s infinite;
+    }
+    
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+    
+    .animation-delay-4000 {
+        animation-delay: 4s;
+    }
+    
+    .animate-count {
+        transition: all 1s ease-out;
+    }
+</style>
+
+<script>
+    // Count animation for fun facts
+    document.addEventListener('DOMContentLoaded', function() {
+        const counters = document.querySelectorAll('.animate-count');
+        
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const speed = 2000 / target;
+            let count = 0;
+            
+            const updateCount = () => {
+                const increment = target / speed;
+                count += increment;
+                
+                if (count < target) {
+                    counter.innerText = Math.floor(count) + "+";
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target + "+";
+                }
+            };
+            
+            // Start counting when element is in viewport
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+            
+            observer.observe(counter);
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,406 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Oswin R{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Parallax Effect -->
+<section class="relative bg-gradient-to-r from-indigo-600 to-purple-700 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
+        <!-- Animated background elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-purple-500 rounded-full filter blur-3xl opacity-20 mix-blend-overlay animate-float"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl opacity-20 mix-blend-overlay animate-float-delay"></div>
+        </div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="animate-fade-in-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    Hi, I'm <span class="text-yellow-300 animate-pulse">Oswin R</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-indigo-100">
+                    Computer Science Student & Aspiring Developer
+                </h2>
+                <p class="text-lg mb-8 text-indigo-100 max-w-lg">
+                    Passionate about creating innovative solutions through code and design.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="{% url 'projects' %}" class="btn btn-primary transform hover:-translate-y-1 transition-transform duration-300">
+                        View My Work <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <a href="{% url 'contact' %}" class="btn bg-white text-indigo-600 hover:bg-gray-100 transform hover:-translate-y-1 transition-transform duration-300">
+                        Contact Me <i class="fas fa-paper-plane ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                
+                <!-- Social links with hover effects - Updated with proper links -->
+                <div class="mt-8 flex space-x-4">
+                    <a href="https://github.com/oswinr" target="_blank" rel="noopener noreferrer" 
+                       class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                       aria-label="GitHub Profile">
+                        <i class="fab fa-github text-lg"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/oswin03" target="_blank" rel="noopener noreferrer" 
+                       class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                       aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin-in text-lg"></i>
+                    </a>
+                    <a href="https://twitter.com/oswinr" target="_blank" rel="noopener noreferrer" 
+                       class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+                       aria-label="Twitter Profile">
+                        <i class="fab fa-twitter text-lg"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="animate-fade-in-up delay-100">
+                <div class="relative flex flex-col items-center">
+                    <!-- Profile Picture with Floating Badge -->
+                    <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl mb-6 group hover:shadow-indigo-500/30 transition-all duration-500">
+                        <img src="{% static 'images/profile.jpg' %}" alt="Oswin R" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        
+                        <!-- Verification Badge -->
+                        <div class="absolute bottom-2 right-2 bg-white p-2 rounded-full shadow-md transform transition-all duration-300 group-hover:rotate-12">
+                            <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Academic Badge with floating animation -->
+                    <div class="bg-white p-4 rounded-lg shadow-lg w-full max-w-xs hover:shadow-xl transition-all duration-300 animate-float">
+                        <div class="flex items-center justify-center">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-graduation-cap text-indigo-600 text-xl"></i>
+                            </div>
+                            <div class="text-center">
+                                <p class="font-bold text-gray-800 text-lg">8.5 CGPA</p>
+                                <p class="text-sm text-gray-600">My List Honors</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Featured Projects with Staggered Animation -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Academic Projects</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Highlighting my most significant coursework and personal projects
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for project in featured_projects %}
+            <div class="group relative bg-white rounded-xl shadow-md overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-2"
+                 data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1 }}00">
+                <div class="h-60 bg-gray-100 overflow-hidden relative">
+                    {% if project.image %}
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    {% else %}
+                    <div class="w-full h-full flex items-center justify-center bg-gradient-to-r from-gray-200 to-gray-300">
+                        <i class="fas fa-image text-gray-400 text-4xl"></i>
+                    </div>
+                    {% endif %}
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <a href="{{ project.project_url|default:'#' }}" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center px-4 py-2 bg-white text-indigo-600 rounded-lg font-medium hover:bg-gray-50 transition-all transform translate-y-2 group-hover:translate-y-0">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">{{ project.title }}</h3>
+                        {% if project.project_url %}
+                        <a href="{{ project.project_url }}" target="_blank" rel="noopener noreferrer"
+                           class="text-gray-400 hover:text-indigo-600 transition-colors"
+                           aria-label="View project">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                    <p class="text-gray-600 mb-4">{{ project.description|truncatewords:20 }}</p>
+                    {% if project.technologies %}
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        {% for tech in project.technologies.split|slice:":3" %}
+                        <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full hover:bg-indigo-200 transition-colors">{{ tech }}</span>
+                        {% endfor %}
+                        {% if project.technologies.split|length > 3 %}
+                        <span class="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">+{{ project.technologies.split|length|add:"-3" }}</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="300">
+            <a href="{% url 'projects' %}" 
+               class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-indigo-500/30">
+                View All Projects <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Preview with Animated Progress Bars -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Technologies and tools I've mastered through coursework and projects
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% for skill in skills|slice:":8" %}
+            <div class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                 data-aos="zoom-in" data-aos-delay="{{ forloop.counter0|add:1 }}00">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="{{ skill.icon }} text-indigo-600 group-hover:text-white text-xl transition-colors"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">{{ skill.title }}</h3>
+                        <div class="w-full bg-gray-200 rounded-full h-2 mt-2 overflow-hidden">
+                            <div class="bg-indigo-600 h-2 rounded-full progress-bar" style="width: 0" data-width="{{ skill.percentage }}"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600 text-sm group-hover:text-gray-800 transition-colors">{{ skill.description|truncatewords:15 }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-12" data-aos="fade-up">
+            <a href="{% url 'expertise' %}" 
+               class="inline-flex items-center px-6 py-3 bg-white text-indigo-600 border border-indigo-600 rounded-lg font-medium hover:bg-indigo-600 hover:text-white transition-all transform hover:-translate-y-1">
+                View All Skills <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Academic Achievements with Timeline Animation -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Academic Achievements</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Highlights from my educational journey and accomplishments
+            </p>
+        </div>
+        
+        <div class="space-y-8">
+            <!-- Achievement 1 -->
+            <div class="group bg-gray-50 p-6 rounded-xl hover:bg-indigo-50 transition-colors duration-300 border-l-4 border-transparent hover:border-indigo-600"
+                 data-aos="fade-right">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg mr-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-trophy text-indigo-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">My List Honors</h3>
+                        <p class="text-gray-600">Maintained a 8.5 CGPA for 4 consecutive semesters at Anna University</p>
+                        <p class="text-sm text-gray-500 mt-2">2021-2025 Academic Year</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Achievement 2 -->
+            <div class="group bg-gray-50 p-6 rounded-xl hover:bg-indigo-50 transition-colors duration-300 border-l-4 border-transparent hover:border-indigo-600"
+                 data-aos="fade-right" data-aos-delay="100">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg mr-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-medal text-indigo-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">Hackathon</h3>
+                        <p class="text-gray-600">Take part in University Coding Competition for developing a Secure file sharing system using Blockchain</p>
+                        <p class="text-sm text-gray-500 mt-2">Spring 2025</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Achievement 3 -->
+            <div class="group bg-gray-50 p-6 rounded-xl hover:bg-indigo-50 transition-colors duration-300 border-l-4 border-transparent hover:border-indigo-600"
+                 data-aos="fade-right" data-aos-delay="200">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 bg-indigo-100 p-3 rounded-lg mr-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-certificate text-indigo-600 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">Research Assistant</h3>
+                        <p class="text-gray-600">Selected to assist with machine learning research in the Computer Science Department</p>
+                        <p class="text-sm text-gray-500 mt-2">2023-Present</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12" data-aos="fade-up">
+            <a href="{% url 'certifications' %}" 
+               class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-indigo-500/30">
+                View All Achievements <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Education Timeline with Animated Dots -->
+<section class="py-16 bg-indigo-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Education Timeline</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                My academic journey and learning milestones
+            </p>
+        </div>
+        
+        <div class="space-y-8">
+            <!-- Degree 1 -->
+            <div class="flex" data-aos="fade-right">
+                <div class="flex flex-col items-center mr-6">
+                    <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white shadow-lg pulse-dot">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="w-px h-full bg-gradient-to-b from-indigo-400 to-transparent mt-2"></div>
+                </div>
+                <div class="pb-8">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Bachelor of Engineering</h3>
+                    <p class="text-gray-600 mb-2">Anna University • 2021-2025 (Expected)</p>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                        <li>Specialization in Web Technologies</li>
+                        <li>CGPA: 8.5/10</li>
+                        <li>My List for 4 consecutive semesters</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section with Animated Gradient -->
+<section class="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white relative overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-float"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl opacity-20 animate-float-delay"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Open to Job Opportunities</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            As a recent graduate, I'm eager to apply my knowledge and grow in a dynamic work environment. I'm looking forward to contributing to meaningful projects while learning from experienced professionals.
+        </p>
+        <a href="{% url 'contact' %}" 
+           class="inline-flex items-center px-8 py-3 bg-white text-indigo-600 rounded-lg font-medium hover:bg-gray-100 text-lg transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-white/20"
+           data-aos="zoom-in" data-aos-delay="200">
+            Contact Me <i class="fas fa-paper-plane ml-2 transition-transform group-hover:translate-x-1"></i>
+        </a>
+    </div>
+</section>
+
+<style>
+    /* Custom Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+        }
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+        }
+    }
+    
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    .animate-float {
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-float-delay {
+        animation: float 6s ease-in-out infinite 1.5s;
+    }
+    
+    .pulse-dot {
+        animation: pulse 2s infinite;
+    }
+    
+    /* Progress bar animation */
+    .progress-bar {
+        transition: width 1.5s ease-out;
+    }
+    
+    /* Hover effects */
+    .group:hover .group-hover\:translate-x-1 {
+        transform: translateX(0.25rem);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize AOS (Animate On Scroll)
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        }
+        
+        // Animate progress bars
+        document.querySelectorAll('.progress-bar').forEach(bar => {
+            const width = bar.getAttribute('data-width');
+            if (width) {
+                bar.style.width = width + '%';
+            }
+        });
+    });
+</script>
+{% endblock %}
